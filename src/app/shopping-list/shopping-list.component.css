@@ -1,0 +1,128 @@
+/* Aplicando a fonte Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Melhorando a responsividade e centralização */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do título */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif; /* Aplicando Roboto ao título */
+}
+
+/* Estilo para itens comprados */
+.purchased {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+/* Estilo para botões */
+button {
+  margin-left: 5px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* Aplicando Roboto aos botões */
+}
+
+/* Hover e estado ativo nos botões */
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003d80;
+}
+
+/* Estilo para o botão de remover (ícone de lixeira) */
+button.btn-danger {
+  background-color: #dc3545;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+button.btn-danger:active {
+  background-color: #a71d2a;
+}
+
+/* Estilo para o botão de "comprar" */
+button.btn-success {
+  background-color: #28a745;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
+
+button.btn-success:active {
+  background-color: #1e7e34;
+}
+
+/* Estilo para o botão de desmarcar */
+button.btn-warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+button.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+button.btn-warning:active {
+  background-color: #d39e00;
+}
+
+/* Estilização das listas */
+ul.list-group {
+  padding-left: 0;
+  list-style: none;
+}
+
+li.list-group-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
