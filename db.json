@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "usuario1",
+      "password": "senha1",
+      "name": "Usuário Um",
+      "email": "usuario1@example.com"
+    },
+    {
+      "id": "2",
+      "username": "usuario2",
+      "password": "senha2",
+      "name": "Usuário Dois",
+      "email": "usuario2@example.com"
+    },
+    {
+      "id": "72d1",
+      "username": "marcelo666888999",
+      "password": "password123",
+      "name": "Marcelo Silva",
+      "email": "marcelo666888999@gmail.com"
+    }
+  ],
+  "shoppingList": [
+    {
+      "id": "1",
+      "title": "Leite",
+      "userId": 1,
+      "included": false
+    },
+    {
+      "id": "2",
+      "title": "Pão",
+      "userId": 1,
+      "included": true
+    }
+  ]
+}

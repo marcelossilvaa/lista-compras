@@ -1,5 +1,21 @@
-<main class="main">
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</main>
+<!-- src/app/app.component.html -->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" routerLink="/">Lista de Compras</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngIf="!(authService.loggedIn$ | async)">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.loggedIn$ | async as isLoggedIn && isLoggedIn">
+          <span class="navbar-text me-3">Olá, {{ authService.userName }}</span>
+        </li>
+        <li class="nav-item" *ngIf="authService.loggedIn$ | async as isLoggedIn && isLoggedIn">
+          <a class="nav-link" href="#" (click)="authService.logout()" aria-label="Logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

@@ -1,12 +1,21 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutesModule } from './app.routes';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
-export const appConfig: ApplicationConfig = {
+export const appConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    provideClientHydration(),
-  ],
+    importProvidersFrom(
+      BrowserModule,
+      HttpClientModule,
+      AppRoutesModule,
+      OAuthModule.forRoot({
+        resourceServer: {
+          allowedUrls: ['http://localhost:3000'], // Ajuste conforme necessário para sua API
+          sendAccessToken: true
+        }
+      })
+    )
+  ]
 };
